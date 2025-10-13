@@ -1,4 +1,4 @@
-# 🔐 Blitz RSA — Recovering `e` from a factored `mod_phi` (with 5 filters)
+# 🔐 Blitz CTF — Custom RSA? - Revenge
 
 [![CTF](https://img.shields.io/badge/CTF-crypto-blue)](#)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-green)](#)
