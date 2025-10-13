@@ -39,13 +39,6 @@ Corner case: If a limb happens to be divisible by `p`, the Legendre symbol retur
 
 ---
 
-## File layout
-
-- `gotam.py` — the challenge service (generates keys, encrypts bit‑by‑bit).
-- `gotam_solver.py` — the offline solver (recovers the plaintext from the printed ciphertext limbs).
-
----
-
 ## Usage
 
 1. **Install dependencies** (only needed for `long_to_bytes` helper):
@@ -53,11 +46,11 @@ Corner case: If a limb happens to be divisible by `p`, the Legendre symbol retur
    python3 -m pip install pycryptodome
    ```
 
-2. **Collect the ciphertext limbs** from the challenge (`[E]ncrypt flag` option). Paste the printed hex values into the `E = [...]` list in `gotam_solver.py`.
+2. **Collect the ciphertext limbs** from the challenge (`[E]ncrypt flag` option). Paste the printed hex values into the `E = [...]` list in `solver.py`.
 
 3. **Run the solver**:
    ```bash
-   python3 gotam_solver.py
+   python3 solver.py
    ```
 
    You should see the plaintext bytes printed (the flag).
