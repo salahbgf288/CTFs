@@ -3,9 +3,8 @@
 At first glance, this challenge looks like an **RSA** problem — but in reality, it’s a **monoalphabetic substitution** cipher.  
 The script encrypts each character independently as:
 
-\[
-c = (\text{ord}(ch))^e \bmod n
-\]
+`c = (ord(ch))^e mod n`
+
 
 and outputs the list of residues.
 
