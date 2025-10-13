@@ -150,14 +150,8 @@ Those are exactly the values I copied into `gotam_solver.py` under the variables
 ## Why factorising `n` was necessary (and how I did it)
 
 To make sense of the transcript and be able to decrypt/recover the flag offline, I first **factorised the modulus `n`** into its two primes `p` and `q`.  
-For speed, I used an **online advanced factoring website** (e.g. Alpertron ECM or FactorDB): I pasted the hex value of `n` and retrieved `p` and `q`. These prime factors are then hard‑coded in `gotam_solver.py` so the script can work without internet access.
+For speed, I used an **online advanced factoring website** : 
+https://www.dcode.fr/decomposition-nombres-premiers
 
-Once `p` and `q` are known, the rest of the solver follows the math implemented in `gotam.py` (Chinese Remainder Theorem steps and per‑bit recovery based on the stream of `hex(e)` values). In short:
-
-1. Read `n`, `t`, and all the `hex(e)` lines from the nc session.
-2. Factor `n` via an advanced factoring site to get `p` and `q`.
-3. Run `python gotam_solver.py` to reconstruct the flag using those values.
-
-> Note: I didn’t brute‑force or guess the primes. The only “external help” was the public factoring website to split `n`; everything else is derived from the service output.
-
+<img width="816" height="498" alt="factor" src="https://github.com/user-attachments/assets/6c8b381f-7af1-4801-97d8-7a8ea320aae4" />
 
