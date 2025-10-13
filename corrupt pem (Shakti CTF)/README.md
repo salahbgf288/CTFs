@@ -46,16 +46,6 @@
 
 ---
 
-## 🧪 Repo layout
-
-```
-.
-├─ README.md                 # this file
-├─ write_pem.py              # reconstruct full PKCS#1 RSA private key (PEM)
-└─ decrypt.py                # decrypt c using the recovered key; prints plaintext + flag
-```
-
----
 
 ## ⚙️ Prereqs
 
