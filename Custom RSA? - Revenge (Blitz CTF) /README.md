@@ -6,7 +6,7 @@
 [![Markdown](https://img.shields.io/badge/README-md-lightgrey)](#)
 
 A short, practical write-up + code for a custom RSA challenge where the only real trick is identifying the public exponent **`e`** using a **fully factored** value  
-$mod\_phi = (p-1)(q-1)(e-1).$
+$mod_phi = (p-1)(q-1)(e-1).$
 
 Once `e` is known, the rest is just classic RSA:
 - compute \(\varphi = \dfrac{\texttt{mod\_phi}}{e-1}\),
