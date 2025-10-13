@@ -9,9 +9,10 @@ A short, practical write-up + code for a custom RSA challenge where the only rea
 `mod_phi` $=(p-1)(q-1)(e-1)$
 
 Once `e` is known, the rest is just classic RSA:
-- compute \(\varphi = \dfrac{\texttt{mod\_phi}}{e-1}\),
-- compute the private exponent \(d \equiv e^{-1} \pmod{\varphi}\),
-- and decrypt \(m \equiv c^d \bmod n\).
+- **Compute** φ = `mod_phi / (e - 1)`
+- **Private exponent:** `d = pow(e, -1, φ)`
+- **Decrypt:** `m = pow(c, d, n)`
+
 
 ---
 
