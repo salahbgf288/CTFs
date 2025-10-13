@@ -24,7 +24,7 @@ Once `e` is known, the rest is just classic RSA:
 ## 🧩 Problem Overview
 
 - We’re given an RSA modulus \(n = pq\) and the value  
-  \(\texttt{mod\_phi} = (p-1)(q-1)(e-1)\).
+  `mod_phi` $=(p-1)(q-1)(e-1).$
 - The only difficulty is identifying `e`. Knowing `e` lets us compute `phi` and then `d`.
 - Crucially, **`mod_phi` is easy to factor**, making `e` easy to determine.
 
