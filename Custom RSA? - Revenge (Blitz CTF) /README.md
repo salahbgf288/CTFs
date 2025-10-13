@@ -144,6 +144,8 @@ We used dCode’s prime decomposition tool:
 https://www.dcode.fr/decomposition-nombres-premiers
 </details>
 
+<img width="828" height="424" alt="factor_custom" src="https://github.com/user-attachments/assets/06c022d1-fd11-4a59-80e4-220943867c71" />
+
 ---
 
 ## 🏁 Credits
