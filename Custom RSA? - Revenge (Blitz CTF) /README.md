@@ -20,6 +20,9 @@ This repo documents a clean way to recover the RSA public exponent **`e`** and d
 - Compute `phi = mod_phi // (e - 1)`, `d = pow(e, -1, phi)`, `m = pow(c, d, n)`.
 - For our instance, we get: **`Blitz{Cust0m_RSA_OMGGG}`**.
 
+  <img width="828" height="424" alt="factor_custom" src="https://github.com/user-attachments/assets/3ce05fba-1cd4-406a-b525-afd2c58ed9d2" />
+
+
 ---
 
 ## 🧩 Problem setup
