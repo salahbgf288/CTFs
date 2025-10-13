@@ -108,15 +108,6 @@ For speed we used an online advanced factoring site (e.g., *dcode.fr → Prime N
    b'ASIS{Priv4te_c0mpari5oN_iZ_fundAm3ntaL_7O_s3cuRe_mult1pArtY_cOmpuTatIons!}'
    ```
 
----
-
-## Repo layout
-
-- `gotam.py` — Minimal client / helper to interact with the service and collect limbs.
-- `gotam_solver.py` — Offline decoder using Legendre symbols with the recovered `p, q`.
-
----
-
 ## References
 
 - Goldwasser–Micali public‑key cryptosystem (quadratic residuosity based). Any crypto text (e.g., Katz & Lindell) will have a good treatment.
