@@ -108,10 +108,6 @@ Without `p` or `q`, distinguishing residues from non‑residues **modulo the com
 
 ---
 
-## License
-
-MIT
-
 ## Where the data came from (nc transcript)
 
 All the big numbers in `gotam_solver.py` came straight from the challenge service over **netcat**.
@@ -119,7 +115,7 @@ All the big numbers in `gotam_solver.py` came straight from the challenge servic
 I connected to the remote with:
 
 ```bash
-nc <host> <port>
+nc 65.109.194.34 13131
 ```
 
 After connecting, the service printed a banner and a tiny menu like this (trimmed):
