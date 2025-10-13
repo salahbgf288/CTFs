@@ -49,50 +49,6 @@ This lets you recover `m` **without factoring `N`**.
 
 ---
 
-## ✅ Reference implementation (drop‑in)
-
-Paste your `N`, `ct1`, `ct2`, `e` below. This script:
-- verifies the consistency `pow(ct1, N+1, N) == pow(ct2, e, N)`,  
-- computes `a, b` with extended Euclid,  
-- handles negative exponents via modular inverses,  
-- recovers and prints the plaintext bytes.
-
-```python
-from math import gcd
-from Crypto.Util.number import long_to_bytes
-
-# === paste your instance here ===
-N  = ...  # modulus
-ct1 = ... # m^e mod N
-ct2 = ... # m^(p+q) mod N  (≡ m^(N+1) mod N)
-e  = 65537
-
-def egcd(a, b):
-    if b == 0:
-        return a, 1, 0
-    g, x1, y1 = egcd(b, a % b)
-    return g, y1, x1 - (a // b) * y1
-
-# (m^e)^(N+1) ?= (m^(N+1))^e   — both equal m^(e·(N+1))
-assert pow(ct1, N+1, N) == pow(ct2, e, N), "Inputs inconsistent: not same message/modulus"
-
-g, a, b = egcd(e, N + 1)  # a*e + b*(N+1) = g
-if g != 1:
-    raise SystemExit(f"Requirement failed: gcd(e, N+1) must be 1 (got {g}). Try another exponent pair or instance.")
-
-def modexp_signed(base, exp, mod):
-    if exp >= 0:
-        return pow(base, exp, mod)
-    inv = pow(base, -1, mod)  # modular inverse
-    return pow(inv, -exp, mod)
-
-m = (modexp_signed(ct1, a, N) * modexp_signed(ct2, b, N)) % N
-pt = long_to_bytes(m)
-print(pt)
-```
-
----
-
 ## 🧪 Why it works (quick proof)
 
 We use two facts:
@@ -135,5 +91,6 @@ flag{31470335203860e47f0c3b1dd50e1da9}
 
 ## 📚 Further reading
 
-- “RSA Attacks: Common Modulus” — overview article and examples.
+- RSA Attacks: Common Modulus — InfosecWriteups (article referenced in this challenge):  
+  https://infosecwriteups.com/rsa-attacks-common-modulus-7bdb34f331a5
 - Textbook references on **Euler’s theorem** and the **Extended Euclidean Algorithm**.
