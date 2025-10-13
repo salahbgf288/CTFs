@@ -75,6 +75,8 @@ For speed we used an online advanced factoring site (e.g., *dcode.fr → Prime N
 
 > Without `p` or `q`, distinguishing squares from non‑squares modulo the composite `n` is believed hard (Quadratic Residuosity Assumption), which is why GM is secure against passive adversaries.
 
+<img width="816" height="498" alt="factor" src="https://github.com/user-attachments/assets/7119de41-b98e-4ab6-b144-3c6004e2df88" />
+
 ---
 
 ## What the solver does
