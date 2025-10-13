@@ -12,3 +12,6 @@ This still isn’t the intended plaintext. Because the sample isn’t long enoug
 dCode Monoalphabetic Substitution: https://www.dcode.fr/substitution-monoalphabetique
 
 quipqiup: https://quipqiup.com/
+<img width="788" height="588" alt="FRSA" src="https://github.com/user-attachments/assets/e1491b04-6cdb-4003-8062-0c45a4770e30" />
+
+
