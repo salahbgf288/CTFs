@@ -1,4 +1,4 @@
-# 🔐 Recovering `K` via 28-bit Prime Brute Force  
+# 🔐 MTH211 (h4ckc0n 2025 CTF) 
 
 <div align="center">
 
