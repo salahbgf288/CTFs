@@ -96,29 +96,6 @@ m = pow(cipher, K, n)
 ```
 
 > 🏁 **Flag**: `d4rkc0de{att3nding_cl4ss3s_paid_off}`
-
----
-
-## ▶️ Quickstart
-
-### 1) Clone
-```bash
-git clone https://github.com/your-user/your-repo.git
-cd your-repo
-```
-
-### 2) (Optional) Prep a virtualenv
-```bash
-python3 -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scriptsctivate
-```
-
-### 3) Run the reference solver
-Edit `solve.py` with your **`n`**, **`g`**, **`gift`**, **`cipher`**, then:
-```bash
-python3 solve.py
-```
-
 ---
 
 ## 🧪 Reference `solve.py`
@@ -163,17 +140,4 @@ except UnicodeDecodeError:
 
 ---
 
-## 📂 Repository Structure
-```
-.
-├─ README.md        # this file (pretty & documented)
-├─ solve.py         # reference script (fill constants, verify, decrypt)
-└─ primes.bin       # optional: cached 28-bit primes (binary/text), ignored if absent
-```
-
----
-
-## 🙏 Acknowledgements
-Huge thanks to the challenge authors for the elegant structure and the **gift** relation that makes the brute-force path practical.  
-Made with ❤️ and a lot of `pow()` calls.
 
